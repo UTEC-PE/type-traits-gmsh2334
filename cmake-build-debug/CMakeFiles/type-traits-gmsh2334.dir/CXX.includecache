@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/dlist.h
+iterator.h
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/iterator.h
+
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/iterator.h
+node.h
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/node.h
+
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/main.cpp
+iostream
+-
+slist.h
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/slist.h
+dlist.h
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/dlist.h
+
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/node.h
+
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/slist.h
+iterator.h
+C:/Users/GMSH/Desktop/AED/type-traits-gmsh2334/iterator.h
+iostream
+-
+

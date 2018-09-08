@@ -6,8 +6,8 @@ struct Node {
     T data;
     Node<T>* next;
     Node<T>* prev;
-      
-    Node(T data) : data(data) {
+
+    explicit Node(T data) : data(data) {
         next = prev = nullptr;
     };
       
