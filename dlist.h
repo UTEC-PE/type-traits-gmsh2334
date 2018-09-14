@@ -8,15 +8,15 @@ class DListIterator : public Iterator<T> {
     public: 
         DListIterator() : Iterator<T>() {};
         DListIterator(Node<T> *current) : Iterator<T>(current) {};
-        DListIterator<T> operator++(){
-            if (current)
+        DListIterator<T> operator++(){ // current va a dar error sin this
+            if (current) // Con este if, te va a dar un warning por no retornar nada con una lista vacía
             {
                 this->current = this->current -> next;
                 return *this;
             }
         };
-        DListIterator<T> operator--(){
-            if (current)
+        DListIterator<T> operator--(){ // current va a dar error sin this
+            if (current) // Con este if, te va a dar un warning por no retornar nada con una lista vacía
             {
                 this->current = this->current -> prev;
                 return *this;
@@ -62,7 +62,7 @@ class DList {
             nodes++;
         }
              
-        void pop_front() {
+        void pop_front() { // Y en caso de una lista vacía?
             Node<T>* temp= head;
             temp->next=head->next;
             head = temp->next;
@@ -70,7 +70,7 @@ class DList {
             nodes--;
         }
              
-        void pop_back() {
+        void pop_back() {  // Y en caso de una lista vacía?
             Node<T>* temp = tail;
             temp -> prev = tail -> prev;
             tail = temp -> prev;

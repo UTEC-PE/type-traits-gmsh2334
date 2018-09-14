@@ -11,8 +11,8 @@ public:
 
     explicit SListIterator(Node<T> *current) : Iterator<T>(current) {};
 
-    SListIterator<T> operator++() {
-        if (current) {
+    SListIterator<T> operator++() { // Este current te va a dar error sin un this
+        if (current) {  // Esto te va a dar warning con una lista vacía
             this->current = this->current->next;
             return *this;
         };
@@ -49,7 +49,7 @@ class SList {
             else return (*pointer)->data == search;
         }
 
-        bool insert(T data) {
+        bool insert(T data) { // Se podría reducir la lógica, se repite código similar
             Node<T> **pointer = &head;
             Node <T>* n = new Node<T>(data);
             if(head == nullptr){
@@ -90,7 +90,7 @@ class SList {
             while (temp){
                 temp = temp->next;
             }
-            return iterator(temp);
+            return iterator(temp); // Podría ser un iterator(nullptr)
         }
              
         ~SList() {
